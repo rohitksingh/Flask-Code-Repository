@@ -31,3 +31,7 @@ Output:
 
 <img width="615" alt="Screenshot 2020-06-29 at 9 02 02 PM" src="https://user-images.githubusercontent.com/11274840/86082110-d8277700-ba4b-11ea-8627-0c0da46af850.png">
 
+How to resolve Server is already in use error?
+    kill -9 `lsof -i:5000 -t`
+
+
