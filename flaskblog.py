@@ -9,17 +9,29 @@ posts = [
                 'author': 'Rohit',
                 'tittle': 'First Blog post',
                 'content': 'First blog post content. This is the dummy content',
-                'date_posted': '29 June 2020'
+                'date_posted': '29 June 2020',
+                'color': 'bg-primary'
 
             },
             {
                 'author': 'Jon Doe',
                 'tittle': 'Second Blog post',
                 'content': 'Second blog post content. This is the second content',
-                'date_posted': '2 June 2020'
+                'date_posted': '2 June 2020',
+                'color': 'bg-success'
+
+            },
+            {
+                'author': 'Jon Wick',
+                'tittle': 'Thord Blog post',
+                'content': 'Third blog post content. This is the second content',
+                'date_posted': '21 June 2020',
+                'color': 'bg-warning'
 
             }
 ]
+
+colors =['bg-primary', 'bg-success', 'bg-warning', 'bg-dark']
 
 @app.route('/home')
 @app.route('/')

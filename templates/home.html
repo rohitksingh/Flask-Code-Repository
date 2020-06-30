@@ -2,7 +2,7 @@
 {% block content %}
     {% for post in posts %}
 
-    <div class="card bg-success mb-2 text-white">
+    <div class="card {{post.color}} mb-2 text-white">
         <div class="card-body">
             <h4 class="display-4 text-white">{{post.tittle}}</h4>  
             <div>{{post.content}}</div>
