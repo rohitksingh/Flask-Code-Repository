@@ -1,11 +1,10 @@
 {% extends 'layout.html'%}
 {% block content %}
-<h1>
     {% for post in posts %}
         <h1>{{post.author}}</h1>
         <p>{{post.tittle}}</p>
         <p>{{post.content}}</p>
         <p>{{post.date_posted}}</p>
-        {% endfor %}
-</h1>
+    {% endfor %}
+    <a href="/about">About</a>
 {% endblock %}
