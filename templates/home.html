@@ -1,10 +1,14 @@
 {% extends 'layout.html'%}
 {% block content %}
     {% for post in posts %}
-        <h1>{{post.author}}</h1>
-        <p>{{post.tittle}}</p>
-        <p>{{post.content}}</p>
-        <p>{{post.date_posted}}</p>
+
+    <div class="card bg-success mb-2 text-white">
+        <div class="card-body">
+            <h4 class="display-4 text-white">{{post.tittle}}</h4>  
+            <div>{{post.content}}</div>
+            <div>By: {{post.author}}</div>
+            <div>Posted on: {{post.date_posted}}</div>
+        </div>
+    </div>
     {% endfor %}
-    <a href="/about">About</a>
 {% endblock %}
