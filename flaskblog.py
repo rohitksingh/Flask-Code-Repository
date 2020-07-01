@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, flash, redirect
 from forms import LoginForm, RegistrationForm
 app = Flask(__name__)
 
@@ -35,16 +35,19 @@ colors =['bg-primary', 'bg-success', 'bg-warning', 'bg-dark']
 
 @app.route('/home')
 @app.route('/')
-def hello_world():
+def home():
     return render_template('home.html', posts = posts)
 
 @app.route('/about')
 def about_author():
     return render_template('about.html')
 
-@app.route('/register')
+@app.route('/register', methods=['GET','POST'])
 def register():
     form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'Account created for {form.username.data}!', 'success')
+        return redirect(url_for('home'))
     return render_template('register.html', form=form)
 
 @app.route('/login')
