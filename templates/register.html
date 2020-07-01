@@ -1,26 +1,33 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="col-md-6 login-form-2">
+<div class="content-section">
   <h3>Sign Up</h3>
-  <form>
+  <form method="POST" action="">
+      {{ form.hidden_tag() }}
       <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username" value="" />
+          {{ form.username.label(class="form-control-label")}}
+          {{ form.username(class="form-control form-control-lg")}}
       </div>
       <div class="form-group">
-          <input type="text" class="form-control" placeholder="Email" value="" />
+        {{ form.email.label(class="form-control-label")}}
+        {{ form.email(class="form-control form-control-lg")}}
       </div>
       <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password" value="" />
+        {{ form.password.label(class="form-control-label")}}
+        {{ form.password(class="form-control form-control-lg")}}
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Confirm Password" value="" />
+        {{ form.confirmPassword.label(class="form-control-label")}}
+        {{ form.confirmPassword(class="form-control form-control-lg")}}
       </div>
+      
       <div class="form-group">
-          <input type="submit" class="btnSubmit" value="Register" />
+          {{ form.submit(class="btn btn-outline-info")}} 
       </div>
-      <div class="form-group">
-
-        Already have account?<a href="#" class="ForgetPwd" value="Login">Login</a>
+      <div class="border-top pt-3">
+        <small class="text-muted">
+          Already have account?<a href="{{ url_for('login')}}" class="ml-2">Login</a>
+        </small>
       </div>
   </form>
 </div>
