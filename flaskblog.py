@@ -58,7 +58,7 @@ def login():
             flash('You have been logged in!', 'success')
             return redirect(url_for('home'))
         else:
-            flash('Login unsuccessful', 'error')    
+            flash('Login unsuccessful', 'warning')    
     return render_template('login.html', form=form)        
 
 if __name__ == '__main__':
