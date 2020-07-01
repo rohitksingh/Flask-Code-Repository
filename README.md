@@ -36,3 +36,18 @@ Output:
     kill -9 `lsof -i:5000 -t`
 
 
+
+
+
+How to add Login Page?
+
+- Create Python class 
+- Add {{form.username(class="form-control form-control-lg")}}
+- Add methods=['GET', 'POST'] in register route
+- Adding Flash message
+
+
+
+
+
+
