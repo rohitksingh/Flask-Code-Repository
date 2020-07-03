@@ -52,4 +52,14 @@ How to add Login Page?
 <img width="300" alt="Screenshot 2020-07-03 at 4 44 24 PM" src="https://user-images.githubusercontent.com/11274840/86501310-9567e680-bd4c-11ea-8032-fd35b48adb65.png">
 
 
-
+ </br></br>
+## About author
+<p align="center">This Repository is developed and maintained by </p>
+<p align="center">
+  <a href="https://stackoverflow.com/users/4700156/rohit-singh?tab=profile"><img width="100" height="100" src="https://user-images.githubusercontent.com/11274840/30627155-38952a30-9dec-11e7-9072-a00d9a86bdb8.gif">
+</p></a>
+<a href="https://stackoverflow.com/users/4700156/rohit-singh?tab=profile">
+<p align="center">
+  Rohit Singh
+</p>
+</a>
