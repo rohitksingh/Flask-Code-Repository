@@ -47,7 +47,9 @@ How to add Login Page?
 - Adding Flash message
 
 
+## After App Restrucure 
 
+<img width="300" alt="Screenshot 2020-07-03 at 4 44 24 PM" src="https://user-images.githubusercontent.com/11274840/86501310-9567e680-bd4c-11ea-8032-fd35b48adb65.png">
 
 
 
