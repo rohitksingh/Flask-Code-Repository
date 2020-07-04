@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect
-from flaskblog import app
+from flaskblog import app, db, brcypt
 from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User, Post
 
@@ -45,8 +45,13 @@ def about_author():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('home'))
+        hashed_password = brcypt.generate_password_hash(form.password.data).decode('utf-8')
+        db.create_all()
+        user = User(username=form.username.data, password=hashed_password, email= form.email.data)
+        db.session.add(user)
+        db.session.commit()
+        flash(f'Your account created successfully !', 'success')
+        return redirect(url_for('login'))
     return render_template('register.html', form=form)
 
 @app.route('/login', methods=['GET','POST'])
